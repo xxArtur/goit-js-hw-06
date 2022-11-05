@@ -8,21 +8,19 @@ const boxForBoxes = document.querySelector('#boxes')
 createEl.addEventListener('click', createBoxes)
 destroyEl.addEventListener('click', destroyBoxes)
 
-
-const firstSize = 30
-
 function createBoxes(amount) {
-	 amount = inputEl.value
+	  amount = inputEl.value
     const fragment = document.createDocumentFragment()
-
-  for (let i = 0; i < amount; i += 1) {
-    const size = firstSize + i * 10
+    for (let i = 0; i < amount; i += 1) {
+    let sizes = 30 + i * 10
     const newBox = document.createElement('div')
       newBox.style.backgroundColor = getRandomHexColor()
-      newBox.style.width = `${size}px`
-      newBox.style.height = `${size}px`
-       fragment.appendChild(newBox)
-  }
+      newBox.style.width = `${sizes}px`
+      newBox.style.height = `${sizes}px`
+    fragment.appendChild(newBox)
+    console.log(sizes)
+    }
+  
   boxForBoxes.appendChild(fragment)
 }
 

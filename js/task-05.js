@@ -5,9 +5,9 @@ const userNameEl = document.querySelector('#name-output')
 inputEl.addEventListener('input', (event) => {
     const newUserName = event.currentTarget.value
 
-    if (newUserName === '') {
-        return (userNameEl.textContent = 'Anonymous')
+    if (!newUserName) {
+      userNameEl.textContent = 'Anonymous';
     }
-    return (userNameEl.textContent = newUserName)
+    userNameEl.textContent = newUserName
 })
 

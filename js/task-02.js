@@ -14,6 +14,7 @@ const liEL = ingredients.map((element) => {
   addliEl.textContent = element;
   addliEl.classList.add('item')
   list.append(addliEl);
+  console.log(addliEl);
 })
 
 console.log(list);
