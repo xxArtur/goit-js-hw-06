@@ -7,14 +7,15 @@ const ingredients = [
   'Condiments',
 ];
 
-const list = document.querySelector('#ingredients');
+const elementLi = new DocumentFragment();
 
-const liEL = ingredients.map((element) => {
-  const addliEl = document.createElement("li");
-  addliEl.textContent = element;
-  addliEl.classList.add('item')
-  list.append(addliEl);
-  console.log(addliEl);
-})
+for (let liEl of ingredients) { 
+  let item = document.createElement('li');
+  item.innerHTML = liEl;
+  elementLi.append(item);
+}
 
-console.log(list);
+const listEl = document.querySelector('#ingredients');
+listEl.append(elementLi);
+
+
