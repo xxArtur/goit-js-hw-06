@@ -9,4 +9,5 @@ inputEl.addEventListener('input', (event) => {
       return outputEl.textContent = 'Anonymous';
     }
     outputEl.textContent = newUserName;
+
 })
